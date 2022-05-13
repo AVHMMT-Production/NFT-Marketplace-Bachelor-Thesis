@@ -4,14 +4,6 @@ import axios from 'axios'
 import { useMoralis, useMoralisWeb3Api, useMoralisCloudFunction } from "react-moralis";
 import { NFTcard } from '../components/nft';
 
-
-import {
-    nftmarketaddress, nftaddress
-} from '../config'
-
-import NFT from '../artifacts/contracts/NFT.sol/Minter.json'
-import Market from '../artifacts/contracts/Market.sol/MarketplaceHandler.json'
-
 export default function Dashboard() {
     const [nfts, setNfts] = useState([])
     const [ownedNfts, setOwnedNfts] = useState([])
