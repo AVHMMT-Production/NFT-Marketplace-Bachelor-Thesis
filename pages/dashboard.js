@@ -4,6 +4,8 @@ import axios from 'axios'
 import { useMoralis, useMoralisWeb3Api, useMoralisCloudFunction } from "react-moralis";
 import { NFTcard } from '../components/nft';
 
+import { nftaddress } from '../config'
+
 export default function Dashboard() {
     const [nfts, setNfts] = useState([])
     const [ownedNfts, setOwnedNfts] = useState([])
