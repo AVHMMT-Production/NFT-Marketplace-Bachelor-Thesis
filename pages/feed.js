@@ -6,8 +6,10 @@ export default function Feed() {
   const [nfts, setNfts] = useState([])
   const [sokList, setSokList] = useState([])
   const [fullList, setFullList] = useState([])
-  const [testList, setTestList] = useState([])
+  const [searchList, setSearchList] = useState([])
   const [loadingState, setLoadingState] = useState('not-loaded')
+  const [selectedOption, setSelectedOption] = useState(undefined);
+  const [inputText, setInputText] = useState("");
   const { fetch } = useMoralisCloudFunction(
     "listedAndSoldNFTs",
     { autoFetch: false }
@@ -36,25 +38,28 @@ export default function Feed() {
   }
   let inputHandler = (e) => {
     var lowerCase = e.target.value.toLowerCase();
-    setTestList(fullList.filter(nft => nft.name.toLowerCase().includes(lowerCase)));
+    setInputText(lowerCase);
+    setSearchList(fullList.filter(nft => nft.name.toLowerCase().includes(lowerCase)));
     setNfts(fullList.filter(nft => nft.name.toLowerCase().includes(lowerCase)))
 
   };
 
   let selectHandler = (e) => {
-    if(testList.length > 0) {
+    setSelectedOption(e.target.value);
+    console.log(e.target.value);
+    if(searchList.length > 0) {
       switch(e.target.value){
         case "nameatz":
-          setNfts(testList.sort((a,b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0)));
+          setNfts(searchList.sort((a,b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0)));
           break;
         case "namezta":
-          setNfts(testList.sort((a,b) => (a.name > b.name) ? -1 : ((b.name > a.name) ? 1 : 0)));
+          setNfts(searchList.sort((a,b) => (a.name > b.name) ? -1 : ((b.name > a.name) ? 1 : 0)));
           break;
         case "pricelth":
-          setNfts(testList.sort((a,b) => (a.price > b.price) ? 1 : ((b.price > a.price) ? -1 : 0)));
+          setNfts(searchList.sort((a,b) => (a.price > b.price) ? 1 : ((b.price > a.price) ? -1 : 0)));
           break;
           case "pricehtl":
-            setNfts(testList.sort((a,b) => (a.price > b.price) ? -1 : ((b.price > a.price) ? 1 : 0)));
+            setNfts(searchList.sort((a,b) => (a.price > b.price) ? -1 : ((b.price > a.price) ? 1 : 0)));
             break;
         default:
           break;
@@ -77,7 +82,7 @@ export default function Feed() {
           break;
       }
     }
-    console.log(testList);
+    console.log(searchList);
   }
 
 return (
@@ -107,7 +112,7 @@ return (
             ease-in-out
             m-0
             focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" aria-label="Default select example" onChange={selectHandler}>
-              <option selected>Open this select menu</option>
+              <option selected>Sort by</option>
               <option value="nameatz">Name ascending</option>
               <option value="namezta">Name descending</option>
               <option value="pricelth">Price low to high</option>
@@ -130,6 +135,11 @@ return (
               )
           }
       })()}
+        {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-4">
+        {
+            nfts.map((nft, i) => (<NFTcard nft={nft} key={i} formated={false} />))
+        }
+        </div> */}
     </div>
     </div>
 )
