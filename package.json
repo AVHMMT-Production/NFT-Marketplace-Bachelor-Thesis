@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "export SET NODE_OPTIONS=--openssl-legacy-provider && npx hardhat node",
+    "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
