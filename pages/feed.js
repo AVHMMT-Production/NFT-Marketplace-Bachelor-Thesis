@@ -56,10 +56,10 @@ export default function Feed() {
           setNfts(searchList.sort((a,b) => (a.name > b.name) ? -1 : ((b.name > a.name) ? 1 : 0)));
           break;
         case "pricelth":
-          setNfts(searchList.sort((a,b) => (a.price > b.price) ? 1 : ((b.price > a.price) ? -1 : 0)));
+          setNfts(searchList.sort((a,b) => (a.price > b.price) ? -1 : ((b.price > a.price) ? 1 : 0)));
           break;
           case "pricehtl":
-            setNfts(searchList.sort((a,b) => (a.price > b.price) ? -1 : ((b.price > a.price) ? 1 : 0)));
+           setNfts(searchList.sort((a,b) => (a.price > b.price) ? 1 : ((b.price > a.price) ? -1 : 0)));
             break;
         default:
           break;
@@ -73,10 +73,10 @@ export default function Feed() {
           setNfts(sokList.sort((a,b) => (a.name > b.name) ? -1 : ((b.name > a.name) ? 1 : 0)));
           break;
         case "pricelth":
-          setNfts(sokList.sort((a,b) => (a.price > b.price) ? 1 : ((b.price > a.price) ? -1 : 0)));
+          setNfts(sokList.sort((a,b) => (a.price > b.price) ? -1 : ((b.price > a.price) ? 1 : 0)));
           break;
           case "pricehtl":
-            setNfts(sokList.sort((a,b) => (a.price > b.price) ? -1 : ((b.price > a.price) ? 1 : 0)));
+            setNfts(sokList.sort((a,b) => (a.price > b.price) ? 1 : ((b.price > a.price) ? -1 : 0)));
             break;
         default:
           break;
@@ -113,8 +113,8 @@ return (
             m-0
             focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" aria-label="Default select example" onChange={selectHandler}>
               <option selected>Sort by</option>
-              <option value="nameatz">Name ascending</option>
-              <option value="namezta">Name descending</option>
+              <option value="nameatz">Name A-Z</option>
+              <option value="namezta">Name Z-A</option>
               <option value="pricelth">Price low to high</option>
               <option value="pricehtl">Price high to low</option>
           </select>
