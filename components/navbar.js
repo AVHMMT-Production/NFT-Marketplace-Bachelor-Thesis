@@ -32,7 +32,7 @@ export default function Navbar(){
     <nav className="container flex justify-around py-8 mx-auto">
     <div className="flex items-center">
     <img className="h-8 w-8" src="/logo.ico" alt="Workflow" />
-        <Link href="/test"> 
+        <Link href="/"> 
             <h3 className="text-2xl font-medium ml-4 text-indigo-400">NFTIO</h3>
         </Link>
     </div>
