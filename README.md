@@ -25,12 +25,8 @@ one of the Ethereum TestNet.
   - OpenZeppelin Contract Standards. "OpenZeppelin is the premier crypto cybersecurity technology and services company, trusted by the most used DeFi and NFT projects." (taken from [OpenZeppelin](https://openzeppelin.com/about/)). OpenZeppelin has a library for secure smart contract development. We will be using the ERC721 standard for our non-fungible tokens.
 - HardHat
   - HardHat is a Ethereum development enviroment which makes it easy testing your smart contracts locally. This way you can debug and test your Solidity contracts easily without having to go through a official TestNet. It's very flexible and has lots of support for plugins etc.
-- Polygon & Infura
-  - Polygon is a secondary scaling solution for the Ethereum blockchain. Since the Ethereum blockchain has become slow and expensive to use, Polygon solves this by processing some of the transactions elsewhere. Making it cheaper to use.
-  - Infura is going to be use to deploy our DApp to the Polygon TestNet when we are ready. Infura makes everything easier for a developer who wants to learn and test their DApp.
-  
+- Moralis decentralised server and IPFS
+
+
 ### Honorable mention
 Just mentioning that we use Visual Studio Code for developing the DApp with is amazing expandability with all these extensions, and GitHub + Git for making cooperation and version control so easy.
-
-## Link to Overleaf repo
-https://github.com/AVHMMT-Production/NFT-Marketplace---Thesis
