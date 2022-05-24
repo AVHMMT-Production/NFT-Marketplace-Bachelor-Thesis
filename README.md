@@ -5,12 +5,11 @@
 [![built-with tailwindcss](https://img.shields.io/badge/built%20with-tailwindcss-3677FF)](https://tailwindcss.com/)
 [![built-with hardhat](https://img.shields.io/badge/built%20with-hardhat-3677FF)](https://hardhat.dev/)
 
-The objective of this thesis is to investigate NFTs and design your own NFT marketplace on
+The objective of this thesis is to design an NFT marketplace on
 the Ethereum TestNet.
 
 We will be developing a web app where anyone with a Ethereum wallet is able to mint, buy
-and sell NFTs. In the process we will be investigating NFTs to find what is most suitable to be
-traded on a marketplace. We will be creating smart contracts to be deployed on the network
+and sell NFTs. We will be creating smart contracts to be deployed on the network
 to control the trade of NFTs, and we will be integrating and deploying our marketplace with
 one of the Ethereum TestNet.
 
